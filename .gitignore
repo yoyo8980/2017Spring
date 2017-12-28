@@ -15,3 +15,4 @@ Servers/
 !/.mvn/wrapper/maven-wrapper.jar
 /.metadata/
 /.metadata/
+/.recommenders/

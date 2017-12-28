@@ -14,7 +14,11 @@
 <div class="container">
 	<div class="row">
 		  <div class="col-md-12">
+		  <div class="jumbotron">
 		  	<h1>메인페이지</h1>
+		  	<p>테이블의 내용을 출력합니다</p>
+			  <p><a class="btn btn-primary btn-lg" href="./add" role="button">글쓰기</a></p>
+			</div>
 		  </div>
 	</div>
 	<div class="row">
@@ -28,10 +32,10 @@
 		  		</tr>
 		  		<c:forEach items="${list }" var="bean">
 		  			<tr>
-		  				<td><a href="#">${bean.sabun }</a></td>
-		  				<td><a href="#">${bean.name }</a></td>
-		  				<td><a href="#">${bean.nalja }</a></td>
-		  				<td><a href="#">${bean.pay }</a></td>
+		  				<td><a href="./detail?idx=${bean.sabun }">${bean.sabun }</a></td>
+		  				<td><a href="./detail?idx=${bean.sabun }">${bean.name }</a></td>
+		  				<td><a href="./detail?idx=${bean.sabun }">${bean.nalja }</a></td>
+		  				<td><a href="./detail?idx=${bean.sabun }">${bean.pay }</a></td>
 		  			</tr>
 		  		</c:forEach>
 		  	</table>

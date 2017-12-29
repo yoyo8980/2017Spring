@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="org.gjt.mm.mysql.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/xe"></property>
+		<property name="username" value="scott"></property>
+		<property name="password" value="tiger"></property>
+	</bean>
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="guestDao" class="com.hb.ex03.model.GuestDaoImpl">
+			<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		</bean>
+		
+		<bean id="guestService" class="com.hb.ex03.service.GuestServiceImpl">
+			<constructor-arg name="guestDao" ref="guestDao"></constructor-arg>
+		</bean>
+</beans>

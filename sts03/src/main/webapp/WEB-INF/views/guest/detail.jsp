@@ -12,11 +12,11 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/ex03/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/ex03/resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- 상단 배너 메뉴 -->
@@ -50,28 +50,40 @@
 	<div class="container">
 		<div class="row content">
 		  <div class="col-md-12">
-		  	<div class="jumbotron">
-			  <h1>리스트 페이지</h1>
-			  <p>guest03 테이블의 내용</p>
-			  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-			</div>
-			<div class="panel panel-primary">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading">
-				  	목록
-			  </div>
-			<div class="list-group">
-			  <c:forEach items="${list }" var="bean">
-			  <a href="./guest/${bean.sabun }" class="list-group-item">
-				  	<span class="badge">${bean.pay }</span>
-				    <h4>${bean.sabun }</h4>
-				    <p>${bean.name } (${bean.nalja })</p>
-			  </a>
-			  </c:forEach>
-			</div>
-			</div>
+			  	<div class="jumbotron">
+				  <h1>상세 페이지</h1>
+				  <p>${bean.sabun }님의 데이터</p>
+				  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+				</div>
+				
+				
+		<div class="row content">
+		  <div class="col-md-12">
+		  	<p class="bg-info">
+		  		<span>사번</span><span>${bean.sabun }</span>
+		  	</p>
+		  	<p class="bg-info">
+		  		<span>이름</span><span>${bean.name }</span>
+		  	</p>
+		  	<p class="bg-info">
+		  		<span>날짜</span><span>${bean.nalja }</span>
+		  	</p>
+		  	<p class="bg-info">
+		  		<span>금액</span><span>${bean.pay }</span>
+		  	</p>
+		  	<p>
+				<a href="/ex03/guest/${bean.sabun }/edit">수정</a>
+				<a href="/ex03/guest/${bean.sabun }/delete">삭제</a>
+		  	</p>
+		  
 		  </div>
-		</div>
+		 </div>
+		  
+		  
+		  </div><!-- row content close -->
+		</div><!-- container close -->
+		
+		
 		<div class="row footer">
 		  <div class="col-md-12">
 		  비트교육센터 서울시 서초구 서초동 1327-15 비트아카데미빌딩｜ 사업자등록번호 : 214-85-24928

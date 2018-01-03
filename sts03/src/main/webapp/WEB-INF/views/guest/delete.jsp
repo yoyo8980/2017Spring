@@ -50,28 +50,27 @@
 	<div class="container">
 		<div class="row content">
 		  <div class="col-md-12">
-		  	<div class="jumbotron">
-			  <h1>리스트 페이지</h1>
-			  <p>guest03 테이블의 내용</p>
-			  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-			</div>
-			<div class="panel panel-primary">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading">
-				  	목록
-			  </div>
-			<div class="list-group">
-			  <c:forEach items="${list }" var="bean">
-			  <a href="./guest/${bean.sabun }" class="list-group-item">
-				  	<span class="badge">${bean.pay }</span>
-				    <h4>${bean.sabun }</h4>
-				    <p>${bean.name } (${bean.nalja })</p>
-			  </a>
-			  </c:forEach>
-			</div>
-			</div>
+			  	<div class="jumbotron">
+				  <h1>삭제 페이지</h1>
+				  <p>삭제확인</p>
+				  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+				</div>
+				
+				
+		<div class="row content">
+		  <div class="col-md-12">
+		  <h2>${sabun } 데이터를 삭제하시겠습니까</h2>
+		  <form class="form-horizontal" method="post" action="/ex03/guest/${sabun }">
+			  	<input type="hidden" name="_method" value="delete">
+			  	<input type="hidden" name="sabun" value="${sabun }">
+				<button type="submit" class="btn btn-primary">확인</button>
+			</form>
 		  </div>
-		</div>
+		 </div>
+		  </div><!-- row content cloase -->
+		</div><!-- container close -->
+		
+		
 		<div class="row footer">
 		  <div class="col-md-12">
 		  비트교육센터 서울시 서초구 서초동 1327-15 비트아카데미빌딩｜ 사업자등록번호 : 214-85-24928

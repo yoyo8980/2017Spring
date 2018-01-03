@@ -59,11 +59,14 @@
 				
 		<div class="row content">
 		  <div class="col-md-12">
-		  <form class="form-horizontal" method="post">
+		  <form class="form-horizontal" method="post" >
 			  <div class="form-group">
 			    <label for="name" class="col-sm-2 control-label">name</label>
 			    <div class="col-sm-10">
-			      <input type="name" name="name" class="form-control" id="name" placeholder="name">
+			    <div class="input-group">
+			  		<span class="input-group-addon" id="basic-addon1">@</span>
+			    	<input type="text" name="name" class="form-control" id="name" placeholder="name">
+			    	</div>
 			    </div>
 			  </div>
 			  <div class="form-group">

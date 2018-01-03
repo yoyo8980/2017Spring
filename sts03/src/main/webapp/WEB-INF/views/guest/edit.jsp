@@ -50,28 +50,47 @@
 	<div class="container">
 		<div class="row content">
 		  <div class="col-md-12">
-		  	<div class="jumbotron">
-			  <h1>리스트 페이지</h1>
-			  <p>guest03 테이블의 내용</p>
-			  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-			</div>
-			<div class="panel panel-primary">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading">
-				  	목록
+			  	<div class="jumbotron">
+				  <h1>수정 페이지</h1>
+				  <p>${bean.sabun }님의 내용수정</p>
+				  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+				</div>
+				
+				
+		<div class="row content">
+		  <div class="col-md-12">
+		  <form class="form-horizontal" method="post" action="/ex03/guest03/${bean.sabun }">
+				  <input type="hidden" name="_method" value="put">
+				  <input type="hidden" name="sabun" value="${bean.sabun }">
+			  <div class="form-group">
+			    <label for="name" class="col-sm-2 control-label">name</label>
+			    <div class="input-group">
+			  		<span class="input-group-addon" id="basic-addon1">@</span>
+			    	<input type="text" value="${bean.name }" name="name" class="form-control" id="name" placeholder="name">
+			    	</div>
 			  </div>
-			<div class="list-group">
-			  <c:forEach items="${list }" var="bean">
-			  <a href="./guest/${bean.sabun }" class="list-group-item">
-				  	<span class="badge">${bean.pay }</span>
-				    <h4>${bean.sabun }</h4>
-				    <p>${bean.name } (${bean.nalja })</p>
-			  </a>
-			  </c:forEach>
-			</div>
-			</div>
+			  <div class="form-group">
+			    <label for="pay" class="col-sm-2 control-label">pay</label>
+			    <div class="col-sm-10">
+			      <input type="text" value="${bean.pay }" name="pay" class="form-control" id="pay" placeholder="pay">
+			    </div>
+			  </div>
+			  			  
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-primary">입력</button>
+			    </div>
+			  </div>
+			</form>
+		  
 		  </div>
-		</div>
+		 </div>
+		  
+		  
+		  </div><!-- row content cloase -->
+		</div><!-- container close -->
+		
+		
 		<div class="row footer">
 		  <div class="col-md-12">
 		  비트교육센터 서울시 서초구 서초동 1327-15 비트아카데미빌딩｜ 사업자등록번호 : 214-85-24928

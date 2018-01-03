@@ -1,0 +1,27 @@
+레스트풀 기본법칙
+1.소문자를 사용하자
+2. 공백대신 하이픈(-,hyphen)을 사용
+3. 확장자를 사용하지 말자
+4. 접근쉽게(정보열람, select, get방식), 나머지 다른방식으로 
+ex) 게시판(bbs)
+
+
+index - http://localhost/(get)
+게시판(목록)- 	http://localhost/bbs(get)
+게시판(3번째글)- 	http://localhost/bbs/3(get)
+게시판(3번째글)-	http://localhost/bbs/3/edit(get)
+게시판(입력)- 	http://localhost/bbs/3(post)
+게시판(수정)- 	http://localhost/bbs/3(put)
+게시판(3번째글 삭제)- http://localhost/bbs/3(delete)
+
+
+
+
+----------------------------------------------------------------
+index - http://localhost/(get)
+게시판(목록)- http://localhost/bbs(get)
+게시판(3번째글)- http://localhost/bbs/3(get)
+게시판(3번째글 삭제)- http://localhost/bbs/3(post)
+게시판(입력폼)- http://localhost/bbs/add(get)
+게시판(입력)- http://localhost/bbs/add(post)
+게시판(수정폼)- http://localhost/bbs/edit(get)

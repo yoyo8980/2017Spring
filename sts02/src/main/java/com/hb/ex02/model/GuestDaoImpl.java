@@ -48,4 +48,11 @@ public class GuestDaoImpl implements GuestDao {
 		return jdbcTemplate.queryForObject(sql, rowMapper, sabun);
 	}
 
+//	@Override
+//	public int deleteOne(int sabun) throws Exception {
+//		// TODO Auto-generated method stub
+//		String sql="DELETE FROM GUEST03 WHERE SABUN=?";
+//		return jdbcTemplate.update(sql, sabun );
+//	}
+
 }

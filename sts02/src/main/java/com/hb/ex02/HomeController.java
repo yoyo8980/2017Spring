@@ -41,4 +41,13 @@ public class HomeController {
 	public void detail(@RequestParam("idx") int sabun, Model model) throws Exception {
 		model.addAttribute("bean",guestDao.selectOne(sabun));
 	}
+	/*@RequestMapping("/delete")
+	public String delete(@RequestParam("idx") int sabun) throws Exception {
+		
+		guestDao.deleteOne(sabun);
+		return "redirect://";
+		
+	}*/
+	
+	
 }

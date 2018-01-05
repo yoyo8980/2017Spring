@@ -10,5 +10,6 @@ public interface GuestDao {
 	void insertOne(GuestVo bean);
 	int updateOne(GuestVo bean);
 	int deleteOne(int sabun);
+	void payPlus(int sabun);
 	
 }

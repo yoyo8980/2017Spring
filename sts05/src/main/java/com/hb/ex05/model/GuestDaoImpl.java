@@ -29,18 +29,25 @@ public class GuestDaoImpl implements GuestDao {
 	@Override
 	public GuestVo selectOne(int sabun) {
 		// TODO Auto-generated method stub
-		return session.selectOne("selectOne", sabun);
+		return session.selectOne("com.hb.ex05.model.GuestDao.selectOne", sabun);
 	}
 
 	@Override
 	public int updateOne(GuestVo bean) {
-		return session.update("updateOne",bean);
+		return session.update("com.hb.ex05.model.GuestDao.updateOne",bean);
 	}
 
 	@Override
 	public int deleteOne(int sabun) {
 		// TODO Auto-generated method stub
-		return session.delete("deleteOne", sabun);
+		return session.delete("com.hb.ex05.model.GuestDao.deleteOne", sabun);
+	}
+
+	@Override
+	public void payPlus(int sabun) {
+		// TODO Auto-generated method stub
+		//update guest03 set pay=pay+1 where sabun=sabun
+		session.update("com.hb.ex05.model.GuestDao.payPlus",sabun);
 	}
 
 }

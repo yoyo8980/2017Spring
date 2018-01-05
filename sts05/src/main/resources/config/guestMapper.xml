@@ -21,4 +21,7 @@
   	<delete id="deleteOne" parameterType="int" >
   	DELETE FROM GUEST03 WHERE SABUN=#{value}
   	</delete>
+  	<update id="payPlus" parameterType="int">
+  	UPDATE GUEST03 SET PAY=PAY+1 WHERE SABUN=#{value}
+  	</update>
   </mapper>

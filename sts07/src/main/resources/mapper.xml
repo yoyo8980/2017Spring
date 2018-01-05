@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.hb.ex07.model.GuestDao">
+ 	<select id="selectAll" resultType="com.hb.ex07.model.GuestVo">
+ 	SELECT * FROM GUEST03
+ 	</select>
+ </mapper>
